@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XRD Lattice Structure Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>XRD Lattice Predictor</h1>
+            <p>Determine Crystal Structure & Parameter (a)</p>
+        </header>
+
+        <section class="card">
+            <div class="input-group">
+                <label for="lambdaValue">X-Ray Wavelength (&lambda; in &Aring;):</label>
+                <input type="number" id="lambdaValue" value="1.54178" step="any">
+            </div>
+
+            <div class="input-group">
+                <label for="thetaValues">Enter 2&theta; Values (comma separated):</label>
+                <input type="text" id="thetaValues" placeholder="e.g. 44.4, 64.6, 81.7">
+            </div>
+            
+            <button onclick="predictLattice()">Analyze Lattice</button>
+            
+            <div class="result-box" id="resultContainer" style="display: none;">
+                <h3 id="predictionResult"></h3>
+                <p id="paramOutput" class="details"></p>
+                <p id="ratioOutput" class="details"></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
